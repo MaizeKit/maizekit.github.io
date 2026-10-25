@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE173"/>
+      <stop offset=".5" stop-color="#FBB024"/>
+      <stop offset="1" stop-color="#EE7C0E"/>
+    </linearGradient>
+    <radialGradient id="light" cx=".3" cy=".08" r=".95">
+      <stop offset="0" stop-color="#fff" stop-opacity=".42"/>
+      <stop offset=".55" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm" cx=".5" cy="1.05" r=".6">
+      <stop offset="0" stop-color="#d9480f" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#d9480f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glassCob" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".2"/>
+    </linearGradient>
+    <linearGradient id="glassL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="glassR" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".4"/>
+    </linearGradient>
+    <linearGradient id="kernel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".45"/>
+    </linearGradient>
+    <linearGradient id="rim" gradientUnits="userSpaceOnUse" x1="220" y1="140" x2="800" y2="900">
+      <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+      <stop offset=".4" stop-color="#fff" stop-opacity=".4"/>
+      <stop offset=".75" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".6"/>
+    </linearGradient>
+    <linearGradient id="streak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity=".0"/>
+      <stop offset=".35" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tileRim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".75"/>
+      <stop offset=".25" stop-color="#fff" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".3"/>
+    </linearGradient>
+    <filter id="lift" x="-40%" y="-30%" width="180%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="26" flood-color="#9a3f00" flood-opacity=".38"/>
+    </filter>
+    <filter id="lift2" x="-40%" y="-30%" width="180%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#9a3f00" flood-opacity=".32"/>
+    </filter>
+    <clipPath id="cobClip"><path d="M512 150 C 582 150 634 270 634 400 L 634 630 C 634 710 572 740 512 740 C 452 740 390 710 390 630 L 390 400 C 390 270 442 150 512 150 Z"/></clipPath>
+  </defs>
+
+  <rect width="1024" height="1024" rx="229" fill="url(#tile)"/>
+  <rect width="1024" height="1024" rx="229" fill="url(#warm)"/>
+  <rect width="1024" height="1024" rx="229" fill="url(#light)"/>
+
+  <g filter="url(#lift)">
+    
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-opacity=".75" stroke-width="7">
+    <path d="M512 156 C 506 110 482 82 454 70"/>
+    <path d="M514 156 C 518 108 534 84 556 64"/>
+    <path d="M512 154 C 512 112 508 88 508 58"/>
+  </g>
+    <path d="M512 150 C 582 150 634 270 634 400 L 634 630 C 634 710 572 740 512 740 C 452 740 390 710 390 630 L 390 400 C 390 270 442 150 512 150 Z" fill="url(#glassCob)"/>
+    <g clip-path="url(#cobClip)">
+      <g fill="url(#kernel)"><rect x="488.0" y="184" width="48" height="42" rx="17"/><rect x="433.0" y="235" width="48" height="42" rx="17"/><rect x="488.0" y="235" width="48" height="42" rx="17"/><rect x="543.0" y="235" width="48" height="42" rx="17"/><rect x="433.0" y="286" width="48" height="42" rx="17"/><rect x="488.0" y="286" width="48" height="42" rx="17"/><rect x="543.0" y="286" width="48" height="42" rx="17"/><rect x="433.0" y="337" width="48" height="42" rx="17"/><rect x="488.0" y="337" width="48" height="42" rx="17"/><rect x="543.0" y="337" width="48" height="42" rx="17"/><rect x="405.5" y="388" width="48" height="42" rx="17"/><rect x="460.5" y="388" width="48" height="42" rx="17"/><rect x="515.5" y="388" width="48" height="42" rx="17"/><rect x="570.5" y="388" width="48" height="42" rx="17"/><rect x="405.5" y="439" width="48" height="42" rx="17"/><rect x="460.5" y="439" width="48" height="42" rx="17"/><rect x="515.5" y="439" width="48" height="42" rx="17"/><rect x="570.5" y="439" width="48" height="42" rx="17"/><rect x="405.5" y="490" width="48" height="42" rx="17"/><rect x="460.5" y="490" width="48" height="42" rx="17"/><rect x="515.5" y="490" width="48" height="42" rx="17"/><rect x="570.5" y="490" width="48" height="42" rx="17"/><rect x="405.5" y="541" width="48" height="42" rx="17"/><rect x="460.5" y="541" width="48" height="42" rx="17"/><rect x="515.5" y="541" width="48" height="42" rx="17"/><rect x="570.5" y="541" width="48" height="42" rx="17"/><rect x="405.5" y="592" width="48" height="42" rx="17"/><rect x="460.5" y="592" width="48" height="42" rx="17"/><rect x="515.5" y="592" width="48" height="42" rx="17"/><rect x="570.5" y="592" width="48" height="42" rx="17"/><rect x="433.0" y="643" width="48" height="42" rx="17"/><rect x="488.0" y="643" width="48" height="42" rx="17"/><rect x="543.0" y="643" width="48" height="42" rx="17"/></g>
+      <rect x="406" y="190" width="58" height="470" rx="29" fill="url(#streak)"/>
+    </g>
+    <path d="M512 150 C 582 150 634 270 634 400 L 634 630 C 634 710 572 740 512 740 C 452 740 390 710 390 630 L 390 400 C 390 270 442 150 512 150 Z" fill="none" stroke="url(#rim)" stroke-width="5"/>
+  </g>
+
+  <g filter="url(#lift2)">
+    <path d="M502 880 C 384 862 262 760 204 470 C 236 520 300 590 370 628 C 420 656 470 672 486 700 C 496 760 500 820 502 880 Z" fill="url(#glassL)"/>
+    <path d="M522 880 C 640 862 762 760 820 470 C 788 520 724 590 654 628 C 604 656 554 672 538 700 C 528 760 524 820 522 880 Z" fill="url(#glassR)"/>
+    <g fill="none" stroke="#fff" stroke-linecap="round">
+      <path d="M496 862 C 440 820 330 730 250 540" stroke-opacity=".55" stroke-width="5"/>
+      <path d="M528 862 C 584 820 694 730 774 540" stroke-opacity=".35" stroke-width="5"/>
+    </g>
+    <path d="M502 880 C 384 862 262 760 204 470 C 236 520 300 590 370 628 C 420 656 470 672 486 700 C 496 760 500 820 502 880 Z" fill="none" stroke="url(#rim)" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M522 880 C 640 862 762 760 820 470 C 788 520 724 590 654 628 C 604 656 554 672 538 700 C 528 760 524 820 522 880 Z" fill="none" stroke="url(#rim)" stroke-width="5" stroke-linejoin="round"/>
+  </g>
+
+  <rect x="2.5" y="2.5" width="1019" height="1019" rx="226.5" fill="none" stroke="url(#tileRim)" stroke-width="5"/>
+</svg>

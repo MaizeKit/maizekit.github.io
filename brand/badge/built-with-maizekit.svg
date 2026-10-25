@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="20" role="img" aria-label="built with: MaizeKit">
+  <title>built with: MaizeKit</title>
+  <defs>
+    <linearGradient id="t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD24A"/><stop offset="1" stop-color="#F08A10"/></linearGradient>
+    <linearGradient id="s" x2="0" y2="100%"><stop offset="0" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-opacity=".1"/></linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD24A"/><stop offset="1" stop-color="#F5A11A"/></linearGradient>
+    <clipPath id="r"><rect width="152" height="20" rx="3"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="86" height="20" fill="#3a3a3c"/>
+    <rect x="86" width="66" height="20" fill="url(#g)"/>
+    <rect width="152" height="20" fill="url(#s)"/>
+  </g>
+  <g transform="translate(5 3) scale(0.013671875)">
+    <rect width="1024" height="1024" rx="229" fill="url(#t)"/>
+    <path d="M512 150 C 582 150 634 270 634 400 L 634 630 C 634 710 572 740 512 740 C 452 740 390 710 390 630 L 390 400 C 390 270 442 150 512 150 Z" fill="#fff" fill-opacity=".75"/><path d="M502 880 C 384 862 262 760 204 470 C 236 520 300 590 370 628 C 420 656 470 672 486 700 C 496 760 500 820 502 880 Z" fill="#fff"/><path d="M522 880 C 640 862 762 760 820 470 C 788 520 724 590 654 628 C 604 656 554 672 538 700 C 528 760 524 820 522 880 Z" fill="#fff" fill-opacity=".9"/>
+  </g>
+  <g font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11" text-rendering="geometricPrecision">
+    <text x="54.5" y="15" fill="#010101" fill-opacity=".3" text-anchor="middle">built with</text>
+    <text x="54.5" y="14" fill="#fff" text-anchor="middle">built with</text>
+    <text x="119.0" y="14" fill="#2b1a00" font-weight="bold" text-anchor="middle">MaizeKit</text>
+  </g>
+</svg>

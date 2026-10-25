@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maizekit.github.io/sitemap-mazes.xml
+Sitemap: https://maizekit.github.io/sitemap-index.xml

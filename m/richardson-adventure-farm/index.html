@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Corn Maze">
+  <title>Corn Maze</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="hud" class="card" aria-live="polite">
+    <div id="hud-title" class="title">Loading maze…</div>
+    <div id="hud-sub" class="sub"></div>
+  </div>
+  <div id="notice" class="notice" hidden></div>
+
+  <a class="built" href="https://maizekit.github.io/" target="_blank" rel="noopener">
+    <img src="icons/favicon.svg" alt="">Built with MaizeKit
+  </a>
+
+  <div class="bar">
+    <button id="btn-here" class="btn main">Fix my spot</button>
+    <button id="btn-mode" class="btn icon" aria-label="North up / follow me">
+      <svg id="needle" viewBox="0 0 24 24"><path d="M12 2 16 12H8z" fill="#e5383b"/><path d="M12 22 8 12h8z" fill="#9aa0a6"/></svg>
+    </button>
+    <button id="btn-maze" class="btn icon" aria-label="Show whole maze">
+      <svg viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <script src="vendor/maplibre-gl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

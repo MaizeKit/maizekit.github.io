@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrance sign</title>
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <style>
+    /* A printable sign with a QR code for this maze site. Open it, then print (Letter or A4). */
+    @page { margin: 0.5in; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 18px/1.35 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1d1d1f;
+      background: #e8eae6;
+    }
+    .sheet {
+      max-width: 7.5in;
+      margin: 24px auto;
+      padding: 0.6in 0.5in;
+      background: #fff;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+    }
+    h1 { margin: 0 0 6px; font-size: 40px; letter-spacing: -0.02em; }
+    .lede { margin: 0 0 28px; font-size: 24px; color: #5f6368; }
+    #qr svg { width: 4.6in; height: 4.6in; display: block; margin: 0 auto; }
+    .url { margin: 18px 0 26px; font: 600 18px ui-monospace, "SF Mono", Menlo, monospace; word-break: break-all; }
+    ol { display: inline-block; margin: 0; padding-left: 1.2em; text-align: left; font-size: 20px; }
+    li { margin: 6px 0; }
+    .made { margin-top: 30px; font-size: 13px; color: #8a8a8e; display: flex; gap: 6px; justify-content: center; align-items: center; }
+    .made img { width: 16px; height: 16px; }
+    .print { display: block; margin: 0 auto 24px; padding: 12px 24px; border: 0; border-radius: 999px; background: #1a73e8; color: #fff; font: 600 16px inherit; cursor: pointer; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; padding: 0; }
+      .print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <h1 id="name">Corn Maze</h1>
+    <p class="lede">Lost? Scan for a map that shows the way out.</p>
+    <div id="qr" role="img" aria-label="QR code for this maze's guide"></div>
+    <div class="url" id="url"></div>
+    <ol>
+      <li>Scan with your phone's camera.</li>
+      <li>Tap <b>Allow</b> for location.</li>
+      <li>Follow the blue line to the exit.</li>
+    </ol>
+    <div class="made"><img src="icons/favicon.svg" alt="">Built with MaizeKit</div>
+  </div>
+  <button class="print" onclick="window.print()">Print this sign</button>
+
+  <script src="vendor/qrcode.min.js"></script>
+  <script>
+    // The QR code points at this site's own address, so every maze gets its own automatically.
+    const site = new URL('./', location.href).href;
+    document.getElementById('url').textContent = site.replace(/^https?:\/\//, '').replace(/\/$/, '');
+
+    const qr = qrcode(0, 'M'); // auto size, medium error correction
+    qr.addData(site);
+    qr.make();
+    document.getElementById('qr').innerHTML = qr.createSvgTag({ cellSize: 8, margin: 2, scalable: true });
+
+    fetch('assets/maze.json')
+      .then((r) => r.json())
+      .then((m) => {
+        if (!m.name) return;
+        document.getElementById('name').textContent = m.name;
+        document.title = `${m.name}: entrance sign`;
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>
